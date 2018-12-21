@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const prefix = "!";
+const prefix = "#";
 const hero = new Discord.Client({maxMessagesCache: 1});
 const client = new Discord.Client();
 
@@ -21,18 +21,18 @@ client.on('ready', () => {
 });
 
 client.on('message', async message => {
-  if (message.content.startsWith('!help'))
+  if (message.content.startsWith('!!!help'))
 
   var embed = new Discord.RichEmbed()
 
   .setColor('RANDOM')
-  .addField(`-js`,`Publish a JavaScript Code (Must be Support)`,true)
-  .addField(`-html`,`Publish a HTML Code (Must be Support)`,true)
-  .addField(`-python`,`Publish a Python Code (Soon)`,true)
-  .addField(`-eris`,`Publish an Eris Code (Soon)`,true)
-  .addField(`-تقديم`,`تقديم على رتبة سبورت (Must Not be Support)`,true)
-  .addField(`-قبول`,`قبول شخص على تقديمه (Admininstrator Only)`,true)
-  .addField(`-رفض`,`رفض شخص على تقديمه (Administrator Only)`,true)
+  .addField(`#js`,`Publish a JavaScript Code (Must be Support)`,true)
+  .addField(`#html`,`Publish a HTML Code (Must be Support)`,true)
+  .addField(`#python`,`Publish a Python Code (Soon)`,true)
+  .addField(`#eris`,`Publish an Eris Code (Soon)`,true)
+  .addField(`#تقديم`,`تقديم على رتبة سبورت (Must Not be Support)`,true)
+  .addField(`#قبول`,`قبول شخص على تقديمه (Admininstrator Only)`,true)
+  .addField(`#رفض`,`رفض شخص على تقديمه (Administrator Only)`,true)
   .setTimestamp()
   
   message.channel.send(embed)
