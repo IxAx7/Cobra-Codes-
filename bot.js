@@ -1,26 +1,25 @@
 const Discord = require('discord.js');
-const moment = require('moment');
-const client = new Discord.Client();
-const fs = require("fs");
 const prefix = "#";
-const devs = [' 524977043595853827 '];
-const adminprefix = "#";
+const hero = new Discord.Client({maxMessagesCache: 1});
+const client = new Discord.Client();
 
 client.on('ready', () => {
-    console.log('I am ready!');
+    console.log('╔[════════════════════════════════════]╗'); // Heeeeeemo
+    console.log('')
+    console.log('            ╔[════════════]╗')
+    console.log('              Bot Is Online')
+    console.log('            ╚[════════════]╝')
+    console.log('')
+    console.log(`Logged in as ${client.user.tag}!`);
+    console.log('')
+    console.log(`servers! [ " ${client.guilds.size} " ]`);
+    console.log('')
+    console.log(`Users! [ " ${client.users.size} " ]`);
+    console.log('')
+    console.log('╚[════════════════════════════════════]╝')
+          client.user.setActivity("#help",{type: 'STREAMING'});     //Heeeeeemo Heeeeeeeeeemo   
 });
 
-client.on('ready', () => {
-   console.log(`----------------`);
-      console.log(`star Bot- Script By : Cobra Codes™ `);
-        console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers ' Script By : Cobra Codes™ ' `);
-    console.log(`----------------`);
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`#help `,"http://twitch.tv/IxAx7")
-client.user.setStatus("dnd")
- 
-});
 
 
 
@@ -2452,4 +2451,4 @@ client.on("ready", () => {
 
 
 
-client.login(process.env.BOT_TOKEN);
+hero.login(process.env.BOT_TOKEN);
